@@ -1,3 +1,12 @@
+oc_history:
+    resource: "@OCHistoryBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+    
+    oc_advert_index:
+    path:       /advert
+    controller: App\Controller\AdvertController::index

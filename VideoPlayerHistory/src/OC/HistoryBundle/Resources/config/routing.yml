@@ -1,0 +1,3 @@
+oc_history_homepage:
+    path:     /
+    defaults: { _controller: OCHistoryBundle:Default:index }
