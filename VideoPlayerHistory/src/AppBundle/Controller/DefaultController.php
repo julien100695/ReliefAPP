@@ -18,4 +18,14 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+    
+    public function saveHistoryAction(Request $request)
+    {
+        return $this->render('default/saveHistory.html.twig');
+    }
+    
+    public function listCurrentHistoryAction(Request $request)
+    {
+        return $this->render('default/listCurrentHistory.html.twig');
+    }
 }
