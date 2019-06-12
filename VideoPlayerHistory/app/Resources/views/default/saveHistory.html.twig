@@ -3,17 +3,7 @@
 {% block body %}
 
   <div class="text-center"><h1>Voici la page pour sauvegarder un historique </h1></div>
-  
-  <form>
-  <div class="form-group">
-    <label for="UrlVideo">Rentrez l'url que vous souhaitez enregistrer :</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
-  
- 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-  
-  
+   
+  {{ form(form) }}
 
 {% endblock %}
