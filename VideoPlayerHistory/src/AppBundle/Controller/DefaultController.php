@@ -21,6 +21,12 @@ class DefaultController extends Controller
     
     public function saveHistoryAction(Request $request)
     {
+        if ($request->isMethod('POST')) {
+            // Ici, on s'occupera de la création et de la gestion du formulaire
+            
+            $this->addFlash('notice', 'Annonce bien enregistrée.');
+            
+        }
         return $this->render('default/saveHistory.html.twig');
     }
     
