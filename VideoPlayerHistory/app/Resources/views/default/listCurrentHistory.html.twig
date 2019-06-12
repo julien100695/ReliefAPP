@@ -1,1 +1,5 @@
-Voici la page pour lister l ensemble des historiques.
+<ul>
+  {% for Historique in listUrl %}
+    <li>{{ Historique.urlText }}</li>
+  {% endfor %}
+</ul>

@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use AppBundle\Entity\Historique;
 class DefaultController extends Controller
 {
@@ -32,7 +33,7 @@ class DefaultController extends Controller
      $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $Url);
      
      $formBuilder
-     ->add('urlText',      TextType::class)
+     ->add('urlText',   UrlType::class)
      ->add('save',      SubmitType::class)
      ;
      
@@ -67,6 +68,13 @@ class DefaultController extends Controller
     
     public function listCurrentHistoryAction(Request $request)
     {
-        return $this->render('default/listCurrentHistory.html.twig');
+        $repository = $this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('AppBundle:Historique');
+        
+        $listUrl = $repository->findAll();
+        
+        return $this->render('default/listCurrentHistory.html.twig', array('listUrl' => $listUrl));
     }
 }
