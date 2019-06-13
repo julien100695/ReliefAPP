@@ -4,7 +4,6 @@
 
 <div class="text-center"><h1>Voici les videos que vous avez dans votre historique</h1></div>
 
-
 </br>
 
   {% for Historique in listUrl %}
@@ -17,5 +16,7 @@
 </br>
 
 <a href="{{ path('app_saveHistory')}}" class="btn btn-primary col-md-3 col-md-offset-9">Ajouter une nouvelle video a l'historique</a>
+
+
 
 {% endblock %}
