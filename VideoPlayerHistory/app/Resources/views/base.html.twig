@@ -9,11 +9,16 @@
   {% block stylesheets %}
     {# On charge le CSS de bootstrap depuis le site directement #}
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Resources/main.css">
+   
   {% endblock %}
 </head>
 
 <body>
-   
+   <a class="navbar-brand" href="image/imageReliefAPP.png">
+    <img style=" **margin-top: -55px;**" alt="Logo ReliefApp" src="image/imageReliefAPP.png" class="pull-left">
+ 
+</a>
         {% block body %}
         {% endblock %}
   
