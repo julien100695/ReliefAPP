@@ -4,6 +4,15 @@
 
   <div class="text-center"><h1>Voici la page pour sauvegarder un historique </h1></div>
    
+
+
   {{ form(form) }}
+
+
+   <nav aria-label="navigation">
+  <ul class="pager">
+    <li class="previous"><a href="{{ path('app_listCurrentHistory') }}" title="Précédent">Retour au menu principal</a></li>
+  </ul>
+</nav>
 
 {% endblock %}

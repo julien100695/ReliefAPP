@@ -1,12 +1,10 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+
 
 app_saveHistory:
     path : /saveHistory
     controller: AppBundle:Default:saveHistory
     
 app_listCurrentHistory:
-    path : /listCurrentHistory
+    path : /
     controller: AppBundle:Default:listCurrentHistory
     
